@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillMate</title>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("CwfCBozuAOSUA1MF");
+    })();
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', 'Nunito Sans', sans-serif;
+      background: #FFFFFF;
+      color: #1D2026;
+      overflow-x: hidden;
+    }
+    .header {
+      position: relative;
+      width: 100%;
+      height: 840px;
+      background: #4A90E2;
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+      overflow: hidden;
+    }
+    .header-content {
+      max-width: 1440px;
+      margin: auto;
+      position: relative;
+      padding: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .hero-text {
+      max-width: 600px;
+      color: white;
+      animation: fadeInLeft 1.5s ease;
+    }
+    .hero-text h1 {
+      font-size: 48px;
+      color: #F5A623;
+    }
+    .hero-text p {
+      font-size: 18px;
+      font-family: 'Faster One';
+      margin-top: 20px;
+    }
+    .hero-buttons {
+      margin-top: 30px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .hero-buttons .btn {
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .hero-buttons .btn:hover {
+      transform: scale(1.05);
+    }
+    .btn-primary {
+      background-color: rgba(245, 166, 35, 0.8);
+      color: white;
+    }
+    .btn-secondary {
+      background: #fff;
+      color: #252641;
+    }
+    .hero-image {
+      width: 400px;
+      height: auto;
+      box-shadow: 0px 3px 75px rgba(29, 28, 24, 0.25);
+      animation: fadeInRight 1.5s ease;
+    }
+    @keyframes fadeInLeft {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes fadeInRight {
+      from { opacity: 0; transform: translateX(50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    .section {
+      max-width: 1320px;
+      margin: 100px auto;
+      padding: 0 40px;
+    }
+    .section h2 {
+      text-align: center;
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
+    .categories, .testimonials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .category, .testimonial {
+      width: 300px;
+      height: auto;
+      background-color: #EBEBFF;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 18px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+    .testimonial p {
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+    .testimonial .name {
+      font-weight: 600;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: auto;
+      gap: 15px;
+    }
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+    .contact-form button {
+      background: #F5A623;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .contact-form button:hover {
+      background: #d78b12;
+    }
+    .footer {
+      background: #252641;
+      color: #fff;
+      padding: 60px 40px;
+      margin-top: 100px;
+      text-align: center;
+      border-top-left-radius: 60px;
+      border-top-right-radius: 60px;
+    }
+    .footer h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .footer p {
+      font-size: 16px;
+      color: #ccc;
+    }
+    @media screen and (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .hero-text h1 {
+        font-size: 36px;
+      }
+      .hero-image {
+        margin-top: 30px;
+        width: 100%;
+        max-width: 300px;
+      }
+      .category, .testimonial {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="hero-text">
+        <h1>Studying Online is now much easier</h1>
+        <p>SkillMate is an interesting platform that will teach you in a more interactive way</p>
+        <div class="hero-buttons">
+          <button class="btn btn-primary">Join for Free</button>
+          <button class="btn btn-secondary">▶ Watch How it Works</button>
+        </div>
+      </div>
+      <img src="young-smiling-confident-woman-using-laptop-computer-looking-camera-isolated-white-background.jpg" alt="Hero" class="hero-image">
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Browse Top Categories</h2>
+    <div class="categories">
+      <div class="category">Development</div>
+      <div class="category">Design</div>
+      <div class="category">Marketing</div>
+      <div class="category">Business</div>
+      <div class="category">Health & Fitness</div>
+      <div class="category">Photography</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>What Our Students Say</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p>“This platform is so easy to use and helped me land a remote job!”</p>
+        <div class="name">– Sarah O.</div>
+      </div>
+      <div class="testimonial">
+        <p>“The video lessons are short, powerful, and straight to the point.”</p>
+        <div class="name">– Daniel M.</div>
+      </div>
+      <div class="testimonial">
+        <p>“Absolutely love SkillMate. It's the best thing for career switching.”</p>
+        <div class="name">– Aisha K.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Contact Us</h2>
+    <form class="contact-form" id="contact-form">
+      <input type="text" name="user_name" placeholder="Your Name" required>
+      <input type="email" name="user_email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <div class="footer">
+    <h3>SkillMate</h3>
+    <p>Empowering learners worldwide with affordable, flexible, and practical skills.</p>
+    <p>&copy; 2025 SkillMate. All rights reserved.</p>
+  </div>
+
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      emailjs.sendForm("service_2nzynao", "template_3rcoz16", this)
+        .then(function() {
+          alert("Message sent successfully!");
+          document.getElementById("contact-form").reset();
+        }, function(error) {
+          alert("Failed to send message. Please try again later.");
+          console.log(error);
+        });
+    });
+  </script>
+</body>
+</html>
